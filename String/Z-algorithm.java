@@ -56,7 +56,7 @@ class Solution
                     
                 }else{
                     //if value is touching boundry or exceeding boundry
-                    //then there may be a chance that more than calculated value is equal now
+                    //then there may be a chance that more char's are equal so, expand further
                     //so calculate the remaining value
                     
                     //thus we will set L as i and start matching from str[R]  onwards  
