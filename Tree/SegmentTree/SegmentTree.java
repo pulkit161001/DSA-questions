@@ -41,7 +41,8 @@ class ST{
         //interior node value will be sum of left and right node value's
         return st[i] = construct(2*i+1,l,mid) + construct(2*i+2,mid+1,r);
     }
-    
+
+    // O(log n)
     int getSum(int l,int r){
         return getSum(0,0,n-1,l,r);
         //return getSumByLazy(0,0,n-1,l,r); => lazy_propogation
@@ -57,7 +58,8 @@ class ST{
         int mid = sl+(sr-sl)/2;
         return getSum(2*i+1,sl,mid,l,r) + getSum(2*i+2,mid+1,sr,l,r);
     }
-    
+
+    // O(log n)
     void update(int i,int val){
         //find diff and change node value's
         int diff = val-a[i];
@@ -77,7 +79,7 @@ class ST{
         else updateOther(id,2*i+2,mid+1,sr,diff);
     }
 
-    //lazy_propogation
+    //lazy_propogation -> O(log n)
     void rangeUpdate(int l,int r,int x){
         rangeUpdateByLazy(0,0,n-1,l,r,x);
     }
@@ -115,6 +117,7 @@ class ST{
         a[i] = a[2*i+1] + a[2*i+2];
     }
 
+    // O(log n)
     int getSumByLazy(int i,int sl,int sr,int l,int r){
         if(lazy[i]!=0){
             a[i] += (sr-sl+1)*lazy[i];
