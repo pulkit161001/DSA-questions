@@ -3,6 +3,9 @@ class NumArray {
     public NumArray(int[] nums) {
         int n=nums.length;
         ft=new FenwickTree(nums,n+1);
+        // Now it's O(n*logn)
+        // we can acheive in O(n) 
+        // https://youtu.be/uSFzHCZ4E-8?t=460&si=OZSDgQKLCxKQm0t3
         for(int i=0;i<n;i++){
             ft.update(i+1,nums[i]);
         }
