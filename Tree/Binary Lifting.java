@@ -20,6 +20,7 @@ instead of jumping 2^jth from current node we will
 
 // https://leetcode.com/problems/kth-ancestor-of-a-tree-node/description/
 // LCA - https://leetcode.com/problems/number-of-ways-to-assign-edge-weights-ii
+// Counting Paths (CSES) - https://cses.fi/paste/4eac783fc5d5953210c674c/
 class TreeAncestor {
     int par[][], col;
     public TreeAncestor(int n, int[] parent) {
