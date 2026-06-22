@@ -1,7 +1,15 @@
 // Header Files and Namespace //
 #include<bits/stdc++.h>
 using namespace std;
- 
+//--------------------------------------------------------------------------------------------------------------------------------------
+// PBDS //
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+//find_by_order : val at ith, order_of_key : 0 indexed
+template<class T> using ordered_set 	=  tree<T,null_type,less<T>      ,rb_tree_tag,tree_order_statistics_node_update>;
+//allow duplicate values
+template<class T> using ordered_multiset = tree<T,null_type,less_equal<T>,rb_tree_tag,tree_order_statistics_node_update>;
 //--------------------------------------------------------------------------------------------------------------------------------------
 // MACROS //
 #define ll long long int
@@ -47,7 +55,7 @@ const ll MOD = 1000000007;
 #define sm(v)  accumulate(full(v), 0)
 #define rev(v) reverse(full(v))
  
-#define input(v,n) for(ll i=0;i<n;i++){cin>>v[i];}
+#define input(v) for(ll i=0;i<v.size();i++){cin>>v[i];}
 #define output(v) for(ll i=0;i<v.size();i++){cout<<v[i]<<" ";} cout<<endl;
  
 //--------------------------------------------------------------------------------------------------------------------------------------  
@@ -318,7 +326,9 @@ class DSU{
  
 //--------------------------------------------------------------------------------------------------------------------------------------  
 void pulkit() {
-
+	
+	
+	
 }
  
  
