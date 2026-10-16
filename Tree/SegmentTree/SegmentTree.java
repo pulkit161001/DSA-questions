@@ -102,7 +102,7 @@ class ST{
         if(l<=sl && sr<=r){
             a[i] += (sr-sl+1)*diff;
             //if this is not a leaf node then lazy propagate value to child
-            if(low!=high){
+            if(sl!=sr){
                 //not lazy[..] += lazy[i]
                 lazy[2*i+1]+=diff;
                 lazy[2*i+2]+=diff;
