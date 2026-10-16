@@ -112,8 +112,8 @@ class ST{
 
         //partial overlap
         int mid = (sl+sr)>>1;
-        rangeUpdateByLazy(2*i+1,sl,mid,l,r);
-        rangeUpdateByLazy(2*i+2,mid+1,sr,l,r);
+        rangeUpdateByLazy(2*i+1,sl,mid,l,r,diff);
+        rangeUpdateByLazy(2*i+2,mid+1,sr,l,r,diff);
         a[i] = a[2*i+1] + a[2*i+2];
     }
 
